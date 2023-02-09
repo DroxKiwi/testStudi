@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@babel/standalone": "^7.20.15"
+  },
+  "devDependencies": {
+    "jest": "^29.4.2"
   }
 }
