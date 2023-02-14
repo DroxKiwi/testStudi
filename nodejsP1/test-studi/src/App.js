@@ -1,6 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
-import ButtonTest from './Components/Buttons/ButtonTest';
+import logo from './logo.svg'
+import './App.css'
+import FrameTheme from './Components/Test3/FrameTheme'
+
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         </a>
 
         <h2>--------------------------------------------------</h2>
-        <ButtonTest/>
+          <FrameTheme />
       </header>
     </div>
   );
