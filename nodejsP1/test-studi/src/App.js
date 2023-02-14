@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import './App.css'
-import FrameTheme from './Components/Test3/FrameTheme'
+import Frame from './Components/LifeCycle/StoreEx/Frame'
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         </a>
 
         <h2>--------------------------------------------------</h2>
-          <FrameTheme />
+          <Frame />
       </header>
     </div>
   );
