@@ -1,0 +1,63 @@
+/** Text style **/
+.text-center {
+    text-align: center;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+/** Padding **/
+.p-10 {
+    padding: 10px;
+}
+
+.p-20 {
+    padding: 20px;
+}
+
+/** Margin **/
+.m-10 {
+    margin: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+/** Page specific style **/
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+nav {
+    background-color: lightgrey;
+}
+
+nav li {
+    display: inline;
+}
+
+main {
+    display: inline-block;
+    width: 74%;
+}
+
+aside {
+    display: inline-block;
+    width: 25%;
+}
+
+footer {
+    background-color: #607D8B;
+    color: white;
+}

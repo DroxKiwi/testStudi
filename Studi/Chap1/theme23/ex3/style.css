@@ -1,0 +1,57 @@
+.btn.error:hover, .btn.error, .btn.success:hover, .btn.success, .btn.info:hover, .btn.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.info {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 30px;
+  margin: 5px;
+  background: blue;
+  color: white;
+}
+.btn.info:hover {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 30px;
+  margin: 5px;
+  background: #3333ff;
+  color: white;
+  box-shadow: 4px 4px 10px #6666ff;
+}
+.btn.success {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 30px;
+  margin: 5px;
+  background: green;
+  color: #e6ffe6;
+}
+.btn.success:hover {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 30px;
+  margin: 5px;
+  background: #00b300;
+  color: white;
+  box-shadow: 4px 4px 10px #00e600;
+}
+.btn.error {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 30px;
+  margin: 5px;
+  background: red;
+  color: white;
+}
+.btn.error:hover {
+  border-radius: 4px;
+  border: none;
+  padding: 10px 30px;
+  margin: 5px;
+  background: #ff3333;
+  color: white;
+  box-shadow: 4px 4px 10px #ff6666;
+}/*# sourceMappingURL=style.css.map */

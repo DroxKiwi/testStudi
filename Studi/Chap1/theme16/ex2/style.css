@@ -1,0 +1,40 @@
+.first-block {
+    border-style: solid;
+    width: 40%;
+  }
+  
+  .second-block {
+    border-style: solid;
+    height: 2em;
+  }
+  
+  .third-block {
+    float: right;
+    width: 50%;
+  }
+  
+  @media screen and (max-width: 760px) {
+    .first-block {
+      border-style: solid;
+      width: 40%;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+  
+  @media print {
+    .second-block {
+      border-style: solid;
+      height: 2em;
+      width: 75%;
+    }
+  }
+  
+  @media screen and (min-width: 1024px), (max-height: 800px) {
+    .third-block {
+      float: right;
+      background: red;
+      width: 50%;
+    }
+  }
+  

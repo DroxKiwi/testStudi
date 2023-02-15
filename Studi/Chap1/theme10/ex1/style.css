@@ -1,0 +1,94 @@
+/*
+Exercice
+*/
+
+.a {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    background-color: paleturquoise;
+}
+
+.b {
+    position: fixed;
+    top: 150px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+}
+
+.c {
+    position: absolute;
+    top: 260px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    background-color: lightpink;
+}
+
+.d {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+    height: 150px;
+    background-color: palegoldenrod;
+}
+
+.e {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 150px;
+    height: 150px;
+    background-color: lightseagreen;
+}
+
+/* 
+Solution
+
+html, body {
+width: 100%;
+height: 3000px;
+margin: 0;
+}
+
+.a,
+.b,
+.c,
+.d,
+.e {
+height: 150px;
+width: 150px;
+}
+
+.a {
+background: paleturquoise;
+}
+
+.b {
+background: lightgreen;
+}
+
+.c {
+position: relative;
+top: -40px;
+background: lightpink;
+}
+
+.d {
+position: fixed;
+bottom: 0;
+right: 0;
+background: palegoldenrod;
+}
+
+.e {
+position: absolute;
+bottom: 0;
+left: 0;
+background: lightseagreen;
+}

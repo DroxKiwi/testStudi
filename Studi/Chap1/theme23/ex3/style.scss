@@ -1,0 +1,56 @@
+%flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  $info : blue;
+  $success : green;
+  $error : red;
+  $white : white;
+
+
+  @mixin myButton($color){
+    @extend %flex-centered;
+    border-radius: 4px;
+    border: none;
+    padding: 10px 30px;
+    margin: 5px;
+    background: $color;
+    @if ($color == $info){
+        color: white;
+    }
+    @else {
+        color: lighten($color, 70%);
+    }
+  }
+
+  @mixin myHover($color){
+    box-shadow: 4px 4px 10px lighten($color, 20%);
+  }
+
+
+
+  .btn {
+    &.info {
+        @include myButton($info);
+        &:hover{
+            @include myButton(lighten($info, 10%));
+            @include myHover($info);
+        }
+    }
+    &.success {
+        @include myButton($success);
+        &:hover{
+            @include myButton(lighten($success, 10%));
+            @include myHover($success);
+        }
+    }
+    &.error {
+        @include myButton($error);
+        &:hover{
+            @include myButton(lighten($error, 10%));
+            @include myHover($error);
+        }
+    }
+  }

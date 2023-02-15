@@ -1,0 +1,58 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+h2 {
+    font-style: italic;
+}
+
+nav {
+    padding: 10px;
+    background-color: lightgrey;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+main {
+    display: inline-block;
+    width: 74%;
+    font-size: 14px;
+}
+
+aside {
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+    font-size: 14px;
+}
+
+section {
+    padding: 20px;
+    font-size: 14px;
+}
+
+article {
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    background-color: #005cbf;
+    color: white;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+}

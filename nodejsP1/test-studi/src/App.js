@@ -1,7 +1,10 @@
 import logo from './logo.svg'
 import './App.css'
-import Frame from './Components/LifeCycle/StoreEx/Frame'
-
+import Shop from './Container/Shop';
+import { Provider } from 'react-redux';
+import store from './store';
+import { PersistGate } from 'redux-persist/integration/react';
+import { persistor } from './store';
 
 function App() {
   return (
@@ -21,7 +24,11 @@ function App() {
         </a>
 
         <h2>--------------------------------------------------</h2>
-          <Frame />
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+              <Shop />
+          </PersistGate>
+        </Provider> 
       </header>
     </div>
   );

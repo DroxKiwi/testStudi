@@ -1,0 +1,42 @@
+.test div {
+    box-sizing: border-box;
+    width: 400px;
+    height: 60px;
+    margin: 5px 0;
+    padding: 5px 10px;
+  }
+  
+  $info: #0059ff;
+  $success: #00b894;
+  $error: #d63031;
+  $white: #ffffff;
+  
+  $colorsMap: (
+    'info': $info,
+    'success': $success,
+    'error': $error
+  );
+  
+  @mixin colorUtilities($property) {
+    @each $name, $value in $colorsMap {
+      &-#{$name} {
+        #{$property}: $value;
+        @if $property == 'border-color' {
+          border-width: 2px;
+          border-style: solid;
+        }
+      }
+    }
+  }
+  
+  .color {
+    @include colorUtilities(color);
+  }
+  
+  .background {
+    @include colorUtilities(background-color);
+  }
+  
+  .border {
+   @include colorUtilities(border-color);
+  }

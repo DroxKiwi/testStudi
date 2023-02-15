@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_correct.css">
+</head>
+<body>
+<header>
+    <h1>Contactez-moi</h1>
+</header>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec ex bibendum, viverra metus in, eleifend nibh.
+    Fusce eu risus sem. Nullam lacinia aliquam elit, et ullamcorper quam elementum eu.</p>
+
+<form>
+    <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input 
+                    type="email" 
+                    readonly 
+                    class="form-control-plaintext" 
+                    id="email" 
+                    placeholder="email@example.com" 
+                    data-type="email" 
+                    data-invalid-message="Merci de saisir une adresse e-mail correct"
+            >
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="name" class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input 
+                    type="text" 
+                    readonly 
+                    class="form-control-plaintext" 
+                    id="name" placeholder="John Doe" 
+                    data-type="text"
+            >
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="subject" class="col-sm-2 col-form-label">Subject</label>
+        <div class="col-sm-10">
+            <input 
+                    type="text" 
+                    readonly 
+                    class="form-control-plaintext" 
+                    id="subject" 
+                    placeholder="Sujet de votre message" 
+                    data-type="text"
+            >
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="message">Textarea</label>
+        <textarea 
+                class="form-control" 
+                id="message" 
+                placeholder="Votre message" 
+                data-type="text" 
+                required
+        ></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="submit">Envoyer le message</button>
+</form>
+
+</body>
+</html>

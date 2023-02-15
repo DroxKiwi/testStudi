@@ -1,0 +1,18 @@
+.boxWithShadow{
+    box-shadow: -4px 6px 20px hsla(0, 0%, 0%, 0.8);
+  }
+
+.roundedBox{
+  border-radius: 8px 20px 4px 6px;
+  background-image: url(fichiers/photos/vacances/la_reunion.jpg);
+}
+
+.gradientBox{
+    background: linear-gradient(25deg, yellow, green);
+  }
+
+.my-profile {
+	  border-radius: 50%;
+	  width: 100%;
+	  height: 150px;
+}
