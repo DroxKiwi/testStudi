@@ -1,0 +1,136 @@
+/*
+Mon travail
+*/
+
+body{
+    font-family: Calibri, sans-serif;
+    font-size: 12px;
+}
+
+body:active{
+    color: rgba (134,183,31, 0.2);
+}
+
+nav{
+    display: inline-block;
+    margin: 10px;
+    font-family: Tahoma;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav > ul.menu > li > a {
+    color: #B9482B;
+    text-decoration: none;
+}
+
+nav > ul.menu > li > a:hover {
+    text-decoration: underline;
+}
+
+nav > ul.menu > li > a:visited {
+    color: #FF00FF;
+}
+
+nav > ul.menu > li:first-child::after {
+    content: "\0020 \2302";
+}
+
+h1{
+    color: #BC8E14;
+}
+
+h2, h3, h4 {
+    color: #729E0E;
+}
+
+h4{
+    text-decoration: underline;
+}
+
+article > h2::before {
+    content: "\2708";
+}
+
+section > p {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+p {
+    text-decoration: italic;
+}
+
+p.description, p.information{
+    text-decoration: none;
+}
+
+
+/*
+correction
+*/
+
+/* Page */
+*::selection {
+    background-color: rgba(134, 183, 31, 0.2);
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    font-size: 12px;
+}
+
+/* Menu */
+nav > ul.menu > li {
+    display: inline;
+    list-style: none;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Tahoma, sans-serif;
+}
+
+nav > ul.menu > li > a {
+    text-decoration: none;
+    color: #B9482B;
+}
+
+nav > ul.menu > li > a:hover {
+    text-decoration: underline;
+}
+
+nav > ul.menu > li > a:visited {
+    text-decoration: underline;
+    color: #FF00FF;
+}
+
+nav > ul.menu > li:first-child::after {
+    content: "\0020 \2302";
+}
+
+/* Titres */
+h1 {
+    color: #BC8E14
+}
+
+h2, h3, h4 {
+    color: #729E0E;
+}
+
+h4 {
+    text-decoration: underline;
+}
+
+article > h2::before {
+    content: "\2708";
+}
+
+/* Paragraphes */
+section > p {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+p:not(.description):not(.informations) {
+    font-style: italic;
+}

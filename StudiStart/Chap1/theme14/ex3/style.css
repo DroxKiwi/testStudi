@@ -1,0 +1,22 @@
+@keyframes bouncingBall {
+    0% {
+      background: rgb(0, 0, 0);
+    }
+  
+    50% {
+      background: yellow;
+    }
+  
+    100% {
+      background: red;
+      transform: translateY(400px);
+    }
+  }
+  
+  .boxWithAnimation{
+    width: 200px;
+    height: 200px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    animation: 0.8s ease-in 0.5s infinite alternate bouncingBall;
+  }

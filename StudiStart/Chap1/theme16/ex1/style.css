@@ -1,0 +1,53 @@
+body {
+    display: grid;
+    grid-template-columns: [start] 1fr [mid] 1fr [end];
+    grid-template-areas: 
+    ". right";
+}
+
+.change-width{
+    border: 1px solid black;
+    width: 40%;
+}
+
+.change-height{
+    border: 1px solid black;
+    height: 2em;
+}
+
+.bottom-right{
+    grid-area: right;
+    background-color: red;
+    font-size: 2em;
+}
+
+.change-viewport{
+    font-size: 7%;
+}
+
+/* solution */
+
+.change-width {
+border-style: solid;
+width: 40%;
+}
+
+div {
+font-size: 16px;/Cette valeur peut être changée pour modifier la hauteur des éléments ayant la classe change-height/
+}
+
+.change-height {
+border-style: solid;
+height: 2em;
+}
+
+.bottom-right {
+font-size: 2rem;
+float: right;
+background: red;
+width: 50%;
+}
+
+.change-viewport {
+font-size: 7vh;
+}

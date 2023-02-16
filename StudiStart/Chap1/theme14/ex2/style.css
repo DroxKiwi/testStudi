@@ -1,0 +1,11 @@
+.boxWithTransition{
+    width: 400px;
+    height: 200px;
+    background: gray;
+  }
+  
+  .boxWithTransition:hover {
+    transition: all 0.8s ease;
+    width: 700px;
+    background: blue;
+  }
