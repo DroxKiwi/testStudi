@@ -1,7 +1,7 @@
 Il y a des classes "Subject", qui sont écoutées, et des classes "Observer" qui sont celles qui les écoutent.
 
 PHP fournit nativement deux interfaces qui permettent de mettre en place ce design pattern : les interfaces SplSubject et SplObserver.
-
+```php
 <?php
 
 interface SplSubject
@@ -22,9 +22,9 @@ interface SplObserver
     public function update(SplSubject $subject);
 }
 ?>
-
+```
 Prenons une classe Personne, et déclenchons des événements dès que l'ont fait appel à la méthode permettant de mettre à jour son âge.
-
+```php
 <?php
 
 class Person implements SplSubject

@@ -1,5 +1,5 @@
 L'utilisation d'un tel design dans ce cas de figure permettrait, qu'importe la situation, de toujours gérer une notification de la même façon.
-
+```php
 <?php
 
 abstract class Notification
@@ -75,7 +75,7 @@ class NotificationFactory
         }
     }
 }
-
+```
 
 $notification1 = NotificationFactory::createNotificationForState('problem');
 // Affichera : On notifie le canal #applicationState du message : La base de données est innaccessible
@@ -87,3 +87,5 @@ $notification2->manageNotification('Tout va bien');
 
 // Qu'importe ce qui a pu être retourné, on effectue le travail de la même façon
 ?>
+
+```

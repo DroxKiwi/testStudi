@@ -2,7 +2,7 @@ Une classe finale est une classe qui ne peut pas avoir de classe fille. Essayer 
 
 Implémentons cela en utilisant l'héritage grâce à une classe abstraite Product permettant de définir la logique de base, 
 et deux classes filles EUProduct et USProduct permettant de faire le formatage.
-
+```php
 <?php
 
 abstract class Product
@@ -62,12 +62,12 @@ echo $hardDrive->formatPrice(); // Affiche 140.00 €
 echo '<br>';
 echo $UShardDrive->formatPrice(); // Affiche $140.00
 ?>
-
+```
 Le problème principal vient du fait que nous avons intégré à la classe Product une logique qui ne la concernait pas directement : le formatage du prix.
 
 Pour résoudre ce problème, nous pouvons traiter l'affichage dans d'autres classes spécialisées que nous allons passer à nos produits. 
 Créons une interface PriceFormatter et ses classes filles dérivées :
-
+```php
 <?php
 
 interface PriceFormatter
@@ -93,10 +93,10 @@ final class USFormatter implements PriceFormatter
     }
 }
 ?>
-
+```
 À partir de là, il nous suffit maintenant de composer nos produits avec le bon PriceFormatter. 
 Créons donc une propriété de type PriceFormatter, qui sera injectée dans le constructeur :
-
+```php
 <?php
 
 require_once 'PriceFormatter.php';
@@ -150,7 +150,7 @@ echo $hardDrive->formatPrice();
 echo '<br>';
 echo $UShardDrive->formatPrice();
 ?>
-
+```
 Nous pouvons maintenant créer nos types de produits sous forme de sous-classes sans problème.
 
 

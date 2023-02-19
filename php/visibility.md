@@ -1,5 +1,5 @@
 Agrémentons notre classe User de quelques propriétés et des accesseurs/mutateurs associés en utilisant la technique des fluent setters :
-
+```php
 <?php
 
 class User
@@ -78,7 +78,7 @@ $john
 
 echo $john->getUsername(); // Affiche "JohnDoe". On aurait également pu rajouter cet appel aux précédents, mais cela pourrait nuire à la clarté du code.
 ?>
-
+```
 
 Un accesseur, appelé getter, est une méthode permettant d'accéder à la valeur d'une propriété. 
 Le nom d'un accesseur est toujours préfixé par get, suivi du nom de la propriété.

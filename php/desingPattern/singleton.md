@@ -1,5 +1,5 @@
 Voici l'implémentation d'un Singleton qui permettrait d'écrire dans un fichier de log :
-
+```php
 <?php
 
 class Logger
@@ -49,10 +49,10 @@ if ($logger1 === $logger2) {
 }
 
 ?>
-
+```
 
 Les références statiques avec static sont résolues en utilisant la classe qui a été appelée.
-
+```php
 <?php
 class A {
     public static function qui() {
@@ -87,13 +87,13 @@ class D extends C {
 }
 D::test(); // retourne “classe D”
 ?>
-
+```
 
 
 Voici une utilisation du design pattern qui retourne une instance unique de la classe PDO, 
 permettant de communiquer avec une base de données :
 
-
+```php
 <?php
 
 class PDOSingleton
@@ -115,12 +115,12 @@ class PDOSingleton
 
 $pdo = PDOSingleton::getInstance();
 ?>
-
+```
 
 
 Partons d’une application qui gère des utilisateurs , ces utilisateurs ont chacun une adresse, 
 cette adresse est une composante de plusieurs variables. Le développement sans patron de conception commencerait de la sorte.
-
+```php
 <?php
 class Address
 {
@@ -151,7 +151,7 @@ private $address;
 $person = new Person(4, 'chemin du village', 11110, 'Narbonne city');
 
 ?>
-
+```
 
 
 Le problème est que la classe Person est étroitement liée à la classe Adress, 
@@ -159,7 +159,7 @@ la classe personne est même inutilisable sans la classe adresse.
 De plus, imaginons que l’on souhaite ajouter une variable à la classe Adress, 
 par exemple $country, il faudra aussi modifier le constructeur de la classe Person et lui rajouter un paramètre. 
 La solution pour éviter toutes ses manipulations et l’injection de dépendance.
-
+```php
 <?php
 class Person
 {
@@ -171,13 +171,13 @@ class Person
     }
 }
 ?>
-
+```
 
 Les interfaces permettent de créer un modèle que les classes qui l'implémentent doivent respecter. 
 Il faut voir l’interface comme un contrat d’utilisation. En implémentant une interface, 
 une classe s’oblige à définir l’ensemble de ses méthodes.
 
-
+```php
 <?php 
 interface IMonInterfaceStatic 
 {   
@@ -197,12 +197,12 @@ class MaClasse implements IMonInterface
         }  
 } 
 ?>
-
+```
 
 Toujours avec une connexion à une base de données, avec ce design, 
 il est par exemple possible d'injecter une interface qui sera par la suite implémentée afin de créer différents types de connexions.
 
-
+```php
 <?php
 
 interface ConnectionInterface
@@ -225,11 +225,11 @@ class Manager
     }
 }
 ?>
-
+```
 
 Il ne reste plus qu'à créer une instance de connexion et la passer au constructeur du manager :
 
-
+```php
 <?php
 
 class PDOConnection implements ConnectionInterface {
@@ -249,3 +249,4 @@ $MySQLi = new MySQLiConnection();
 $mySqliManager = new Manager($MySQLi);
 
 ?>
+```

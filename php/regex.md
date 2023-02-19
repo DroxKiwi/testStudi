@@ -1,8 +1,9 @@
+```php
 <?php
 preg_match($pattern, $subject, $matches=null, $flags=null, $offset=0):
 
 ?>
-
+```
 
 $pattern = chaîne à chercher,
 
@@ -14,7 +15,7 @@ $flags = options pour le retour des résultats (optionnel),
 
 offset = spécifie une position pour le début de la recherche (optionnel).
 
-
+```php
 <?php
 $subject = '0123456789';
 $search = '456';
@@ -26,11 +27,11 @@ if (preg_match($pattern, $subject)) {
   echo "$search n'est pas présent dans $subject";
 }
 ?>
-
+```
 456 est présent dans 0123456789
 
-
-<php 
+```php
+<?php 
 $subject = '0123456789';
 $search = '456';
 $pattern = "/$search/";
@@ -44,11 +45,11 @@ if (preg_match($pattern, $subject, $matches, null, $offset)) {
 }
 
 ?>
-
+```
 456 n'est pas présent dans 56789
 
 
-
+```php
 <?php 
 
 $subject = 'chaîner enchaîner enchaînement';
@@ -59,7 +60,7 @@ preg_match_all($pattern, $subject, $matches);
 var_dump($matches);
 
 ?>
-
+```
 array(1) {
   [0]=>
   array(2) {
@@ -69,7 +70,7 @@ array(1) {
     string(13) "enchaînement"
   }
 }
-
+```php
 <?php 
 
 $subject = 'chaîner enchaîner enchaînement';
@@ -80,7 +81,7 @@ preg_match_all($pattern, $subject, $matches);
 var_dump($matches);
 
 ?>
-
+```
 array(2) {
   [0]=>
   array(2) {
@@ -97,7 +98,7 @@ array(2) {
     string(5) "ement"
   }
 }
-
+```php
 <?php 
 $password = 'aaazerty zerty';
 $pattern = '/a?zerty/';
@@ -106,7 +107,7 @@ preg_match_all($pattern, $password, $matches);
 
 var_dump($matches);
 ?>
-
+```
 array(1) {
   [0]=>
   array(2) {
@@ -117,7 +118,7 @@ array(1) {
   }
 }
 
-
+```php
 <?php 
 $subject = 'john@doe.com';
 $pattern = '/@+/';
@@ -126,10 +127,10 @@ if (preg_match($pattern, $subject)) {
   echo "$subject semble être une adresse email valide";
 }
 ?>
-
+```
 john@doe.com semble être une adresse email valide
 
-
+```php
 <?php 
 $password = 'aaazerty';
 $pattern = '/a*zerty/';
@@ -138,13 +139,13 @@ preg_match($pattern, $password, $matches);
 
 var_dump($matches);
 ?>
-
+```
 array(1) {
   [0]=>
   string(8) "aaazerty"
 }
 
-
+```php
 <?php 
 $password = 'zerty azerty aazerty aaazerty aaaazerty';
 $pattern = '/a{2,4}zerty/';
@@ -153,7 +154,7 @@ preg_match_all($pattern, $password, $matches);
 
 var_dump($matches);
 ?>
-
+```
 array(1) {
   [0]=>
   array(3) {
@@ -174,7 +175,7 @@ array(1) {
 + est équivalent à {1,}
 
 * est équivalent à {0,}
-
+```php
 <?php 
 $subject = 'azerty azazerty boerty erty';
 $pattern = '/(az|bo){1,2}erty/';
@@ -183,7 +184,7 @@ preg_match_all($pattern, $subject, $matches);
 
 var_dump($matches);
 ?>
-
+```
 array(2) {
   [0]=>
   array(3) {
@@ -205,7 +206,7 @@ array(2) {
   }
 }
 
-
+```php
 <?php
 $password = '123456789 abcdefghijklmnopqrstuvwxyz';
 $pattern = '/[789]|[lmnop]/';
@@ -214,7 +215,7 @@ preg_match_all($pattern, $password, $matches);
 
 var_dump($matches);
 ?>
-
+```
 array(1) {
   [0]=>
   array(8) {
@@ -237,7 +238,7 @@ array(1) {
   }
 }
 
-
+```php
 <?php 
 $password = '123456789 abcdefghijklmnopqrstuvwxyz';
 $pattern = '/[7-9]|[l-p]/';
@@ -246,7 +247,7 @@ preg_match_all($pattern, $password, $matches);
 
 var_dump($matches);
 ?>
-
+```
 array(1) {
   [0]=>
   array(8) {
@@ -269,7 +270,7 @@ array(1) {
   }
 }
 
-
+```php
 <?php 
 
 $password = '123456789';
@@ -280,7 +281,7 @@ preg_match_all($pattern, $password, $matches);
 var_dump($matches);
 
 ?>
-
+```
 array(1) {
   [0]=>
   array(6) {
@@ -299,7 +300,7 @@ array(1) {
   }
 }
 
-
+```php
 <?php 
 $string = 'recherche des caracteres autres qu\'alphanumerique !';
 $pattern = '/\W/';
@@ -309,7 +310,7 @@ preg_match_all($pattern, $string, $matches);
 var_dump($matches);
 
 ?>
-
+```
 array(1) {
   [0]=>
   array(7) {
@@ -330,7 +331,7 @@ array(1) {
   }
 }
 
-
+```php
 <?php 
 $string = '456789 123456789';
 $pattern = '/^123/';
@@ -339,11 +340,11 @@ preg_match($pattern, $string, $matches);
 
 var_dump($matches);
 ?>
-
+```
 array(0) {
 }
 
-
+```php
 <?php 
 $string = '123456789 123456789';
 $pattern = '/123$/';
@@ -355,3 +356,4 @@ var_dump($matches);
 
 array(0) {
 }
+```

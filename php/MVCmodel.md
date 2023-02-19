@@ -21,7 +21,7 @@ Contrôleur :
 EXEMPLE : 
 
 MODEL :
-
+```php
 <?php
 
 class Photos
@@ -51,9 +51,9 @@ class Photos
     }
 }
 ?>
-
+```
 VUE : 
-
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -83,17 +83,16 @@ VUE :
 </footer>
 </body>
 </html>
-?>
-
+```
 CONTROLLER :
-
+```php
 <?php
 require_once('modeles/Photos.php');
 $photos = new Photos();
 $photos = $photos->listerPhotos();
 require_once('vues/liste-photos.php');
 ?>
-
+```
 
 Ci-dessous le fichier vues/layout.php dans lequel la structure HTML a été ajoutée. 
 Le titre et le contenu du corps de la page sont remplacés par des variables qui seront définies dans les templates correspondant aux pages.
@@ -102,7 +101,7 @@ Le titre et le contenu du corps de la page sont remplacés par des variables qui
 LAYOUT : 
 
 vues/layout.php
-
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -127,10 +126,9 @@ vues/layout.php
 </footer>
 </body>
 </html>
-?>
-
+```
 vues/liste-photos.php
-
+```php
 <?php
 $titre = 'Mon book';
 ob_start();
@@ -147,7 +145,7 @@ ob_start();
 $contenu = ob_get_clean();
 require_once('layout.php');
 ?>
-
+```
 La fonction ob_start() permet de temporiser la sortie en la plaçant dans une mémoire tampon. 
 Puis la fonction ob_get_clean() retourne le contenu du tampon qui peut être récupéré dans une variable et l'efface. 
 Ce processus permet de mettre le code HTML généré dans la variable contenue afin de l'afficher dans l'ordre souhaité, 
@@ -155,7 +153,7 @@ c'est-à-dire au milieu des balises <section> du layout.
 
 
 vues/affiche-photo.php
-
+```php
 <?php
 $titre = 'Une photo de mon book';
 if (is_null($photo)):
@@ -172,14 +170,14 @@ else:
 endif;
 require_once('layout.php');
 ?>
-
+```
 Pour appliquer ce principe, nous allons créer une classe Controleur. 
 Une méthode listerPhotos() va être chargée de répondre à la demande d'affichage de la page d'accueil et une méthode afficherPhoto() 
 va permettre l'affichage d'une seule photo en grand format.
 
 
 Finalement, cela revient en grande partie à déplacer le code des fichiers index.php et photo.php dans cette nouvelle classe.
-
+```php
 <?php
 
 class Controleur
@@ -201,9 +199,9 @@ class Controleur
     }
 }
 ?>
-
+```
 Le code source du contrôleur frontal index.php est alors largement simplifié en faisant appel à la classe Controleur.
-
+```php
 <?php
 require_once('controleurs/Controleur.php');
 require_once('modeles/Photos.php');
@@ -214,7 +212,7 @@ if (isset($_GET['page']) && 'photo' === $_GET['page']) {
     $controleur->listerPhotos();
 }
 ?>
-
+```
 
 Un trait est un morceau de code que l'on peut réutiliser dans plusieurs classes. 
 Le fait d'utiliser le mot-clé use dans une classe pour utiliser un trait 
@@ -223,7 +221,7 @@ Plus de détails sont précisés dans la documentation officielle de PHP.
 
 
 modeles/Modele.php
-
+```php
 <?php
 
 trait Modele
@@ -242,7 +240,8 @@ trait Modele
 ?>
 
 modeles/Photo.php
-
+```
+```php
 <?php
 
 class Photo
@@ -287,9 +286,9 @@ class Photo
     }
 }
 ?>
-
+```
 modeles/Photos.php
-
+```php
 <?php
 
 class Photos
@@ -310,9 +309,9 @@ class Photos
     }
 }
 ?>
-
+```
 controleurs/Controleur.php
-
+```php
 <?php
 
 class Controleur
@@ -334,9 +333,9 @@ class Controleur
     }
 }
 ?>
-
+```
 index.php 
-
+```php
 <?php
 require_once('controleurs/Controleur.php');
 require_once('modeles/Modele.php');
@@ -349,3 +348,4 @@ if (isset($_GET['page']) && 'photo' === $_GET['page']) {
     $controleur->listerPhotos();
 }
 ?>
+```

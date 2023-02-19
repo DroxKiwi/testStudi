@@ -18,6 +18,11 @@ security:
             provider: app_user_provider
             custom_authenticator: App\Security\UserCustomAuthenticator
 
+            form_login:
+                login_path: app_login
+                check_path: app_login
+            logout:
+                path: app_logout
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
@@ -28,7 +33,7 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/profile, roles: ROLE_USER }
+        - { path: ^/apphome, roles: ROLE_USER }
 
 when@test:
     security:

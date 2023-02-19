@@ -1,6 +1,7 @@
 Prenons l'exemple d'une classe permettant d'écrire dans un fichier : 
 on ouvre le fichier et on stocke la ressource vers ce fichier dans une propriété, qui sera réutilisée par les autres méthodes.
 
+```php
 <?php
 
 class File
@@ -23,7 +24,7 @@ class File
     }
 }
 ?>
-
+```
 
 La visibilité publique permet à n'importe qui d'accéder aux propriétés et aux méthodes de notre classe. 
 C'est la visibilité que nous utilisions jusqu'à présent.

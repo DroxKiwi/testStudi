@@ -3,7 +3,7 @@ Le patron de conception Strategy se rapproche beaucoup de l'injection de dépend
 La différence principale est que, dans le cas de l'injection de dépendance, 
 nous n'avons pas la possibilité de changer l'implémentation de cette interface durant l'exécution de notre script. 
 À l'inverse, dans le cas de Strategy, nous allons pouvoir le faire.
-
+```php
 <?php
 
 interface ConnectionInterface
@@ -58,3 +58,4 @@ $manager->query('foo bar');
 $manager->setConnection($MySQLi);
 $manager->query('foo bar');
 ?>
+```

@@ -1,22 +1,25 @@
 GESTION D'ERREUR
 
 En début de script
+```php
 <?php
 
 ini_set('display_errors', 'off');
 ?>
-
+```
 Dans le fichier de configuration du serveur : php.ini.
+```php
 <?php
 display_errors = Off;
 ou
 environnement=production;
 ?>
+```
 
 Grâce à cette configuration, 
 les erreurs sont automatiquement affichées dans un environnement de développement et cachées en production pour l'utilisateur.
 
-
+```php
 <?php
 
 function firstFunction($sales, $charges) {
@@ -40,7 +43,7 @@ echo '<pre>';
 echo firstFunction(10, 15);
 
 ?>
-
+```
 Retourne une erreur, celle ci remonte l'arborescence des fonctions parents
 
 Fatal error:  Uncaught Exception: Attention le résultat est négatif in index.php:13
@@ -54,7 +57,7 @@ Stack trace:
 
 
 GESTION D'EXCEPTION 
-
+```php
 <?php
 try {
   // Code à tester, où est déclenchée l'exception.
@@ -62,3 +65,4 @@ try {
   // Code à exécuter si l'exception est attrapée.
   }
 ?>
+```
