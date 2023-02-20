@@ -9,9 +9,9 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Form\ColorType;
 use App\Entity\Color;
 
-class FirstRouteController extends AbstractController
+class UserAccountController extends AbstractController
 {
-    #[Route('/firstroute', name: 'app_first_route')]
+    #[Route('/useraccount', name: 'app_user_account')]
     public function index(Request $request): Response
     {
         $color = new Color();
@@ -22,7 +22,7 @@ class FirstRouteController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $uuid = $color->getHashtag();
         }
-        return $this->render('first_route/index.html.twig', [
+        return $this->render('useraccount/index.html.twig', [
             'form' => $form->createView(),
         ]);
     }

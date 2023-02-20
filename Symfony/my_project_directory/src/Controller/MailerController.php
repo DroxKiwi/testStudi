@@ -23,8 +23,9 @@ class MailerController extends AbstractController
 
         $mailer->send($email);
 
-        return $this->render('default/index.html.twig', [
-            'mail' => $email,
+        dump($email);
+        return $this->render('mailer/index.html.twig', [
+            'email' => $email,
         ]);
     }
 }

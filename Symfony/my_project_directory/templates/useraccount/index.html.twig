@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello MailerController!{% endblock %}
-
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
@@ -9,12 +7,12 @@
 </style>
 
 <div class="example-wrapper">
+    <a href="/homepage">homepage</a>
 
-    {{ email.from }}
-    {{ email.to }}
-    {{ email.subject }}
-    {{ email.text }}
-    {{ email.html }}
-
+    {{ form_start(form) }}
+        {{ form_widget(form)}}
+        {{ form_row(form.hashtag)}}
+        <input type="submit" />
+    {{form_end(form)}}
 </div>
 {% endblock %}
