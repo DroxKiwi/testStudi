@@ -12,7 +12,9 @@
     <br>
     {% if currentuser != null %}
         <a href="/logout">log out</a>
-        Hello {{ currentuser.uuid }}
+        Hello !{{ currentuser.uuid }}! from currentuser variable (controller)
+        <br>
+        Hey !{{ app.user.uuid }}! from app.user.uuid variable (twig global variable)
         <br>
         <a href="/useraccount">user account</a>
         <br>
