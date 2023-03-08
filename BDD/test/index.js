@@ -13,9 +13,13 @@ app.listen(port, () => {
 */
 
 const express = require("express")
-const userRoute = require("./routes/user")
 const app = express()
 const port = 3000
+
+const userRoute = require("./routes/user")
+const customerRoute = require("./routes/customer")
+const adminRoute = require("./routes/admin")
+const getRolesMiddleware = require("./utils/getRolesMiddleware")
 
 const mongoose = require("mongoose")
 //mongoose.connect("mongodb://localhost/testDB")
@@ -32,8 +36,11 @@ const models = require("./models")
 app.set("models", models)
 
 app.use(express.json())
+app.use(getRolesMiddleware)
 
 userRoute(app)
+customerRoute(app)
+adminRoute(app)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
